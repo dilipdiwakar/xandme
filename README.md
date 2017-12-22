@@ -4,6 +4,7 @@ we don't have to deploy it in any server, just run it as plain "GoogleapiApplica
 i did not make it as a command line argumnet, i made it as url based.
 Once the server is started , hit the below url where it accepts 3 parameter in the url.
 
+
 http://localhost:8080/api/python/5/Price
 
 CSV file location is configured in the application.properties as "csvFilePath=/Users/dselvaraj/Documents/GoogleApiData.csv"
