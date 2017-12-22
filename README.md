@@ -14,11 +14,18 @@ Base Url : http://localhost:8080/api
 different ways to access the url.
 
 http://localhost:8080/api/python
+
 http://localhost:8080/api/python/5
+
 http://localhost:8080/api/python/5/Price
+
 http://localhost:8080/api/python/5/PublishedDate
+
 http://localhost:8080/api/python/5/MaturityRating
+
 http://localhost:8080/api/python/5/RatingCount
+
 http://localhost:8080/api/python/5/PageCount
+
 
 
