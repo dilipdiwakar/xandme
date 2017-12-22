@@ -6,6 +6,8 @@ Once the server is started , hit the below url where it accepts 3 parameter in t
 
 http://localhost:8080/api/python/5/Price
 
+CSV file location is configured in the application.properties as "csvFilePath=/Users/dselvaraj/Documents/GoogleApiData.csv"
+
 Base Url : http://localhost:8080/api
 
             the first parameter is a search string

@@ -10,6 +10,8 @@ import org.apache.commons.csv.CSVRecord;
 import org.apache.commons.lang3.StringUtils;
 import org.codehaus.jackson.map.DeserializationConfig;
 import org.codehaus.jackson.map.ObjectMapper;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
@@ -17,8 +19,11 @@ import java.io.*;
 import java.util.*;
 
 @Component
+@Configuration
 public class GoogleApiService {
 
+    @Value("${csvFilePath}")
+    String filepath;
     public List<String>  getBooks(String search,String maxResults  , String OrderBy) {
 
         System.out.println("Before :" + search +":"+maxResults+":"+OrderBy);
@@ -33,7 +38,7 @@ public class GoogleApiService {
 
         RestTemplate restTemplate = new RestTemplate();
 
-        System.out.println("URL = https://www.googleapis.com/books/v1/volumes?" +searchParam+maxDisplayResults);
+
         String jsonInString =  restTemplate.getForObject("https://www.googleapis.com/books/v1/volumes?" +searchParam+maxDisplayResults, String.class);
         ;
         ObjectMapper mapper = new ObjectMapper();
@@ -44,8 +49,11 @@ public class GoogleApiService {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        System.out.println(model);
-        File file = new File("/Users/dselvaraj/Documents/sample.csv");
+
+
+        System.out.println("${csvFilePath}" + filepath);
+        //File file = new File("/Users/GoogleApiData.csv");
+        File file = new File(filepath);
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter(file));
             CSVPrinter csvPrinter = new CSVPrinter(writer, CSVFormat.DEFAULT.withHeader("Id", "Kind", "Title","SubTitle","RatingsCount","MaturityRating","PageCount","PublishedDate","AverageRating","Price"));
