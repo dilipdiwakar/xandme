@@ -7,11 +7,15 @@ Once the server is started , hit the below url where it accepts 3 parameter in t
 http://localhost:8080/api/python/5/Price
 
 Base Url : http://localhost:8080/api
+
             the first parameter is a search string
+
             the second parameter is a max result need to be displayed.
+
             the third paramter is the sort by fields based on Price ,PublishedDate,MaturityRating,RatingCount,PageCount,AverageRating/
 
-different ways to access the url.
+
+These are the different ways to access the url to get the results.
 
 http://localhost:8080/api/python
 
