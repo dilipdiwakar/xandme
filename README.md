@@ -1,3 +1,6 @@
+https://github.com/CosmicCosmos/xandme.git
+
+
 I developed this application as a SpringBoot Application (Maven project), since it is a standalone server with embedded tomcat,
 we don't have to deploy it in any server, just run it as plain "GoogleapiApplication.java" java application.
 
@@ -15,7 +18,7 @@ Base Url : http://localhost:8080/api
 
             the second parameter is a max result need to be displayed.
 
-            the third paramter is the sort by fields based on Price ,PublishedDate,MaturityRating,RatingCount,PageCount,AverageRating/
+            the third paramter is the sort by fields based on Price,PublishedDate,MaturityRating,RatingCount,PageCount,AverageRating/
 
 
 These are the different ways to access the url to get the results.
